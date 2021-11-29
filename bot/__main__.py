@@ -62,8 +62,7 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.buildbutton("Owner", "https://t.me/anas_tayyar")
+    buttons.buildbutton("Updates", "https://t.me/jkxmirror")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -75,7 +74,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup('Not Authorized user', context.bot, update, reply_markup)
 
 def restart(update, context):
-    restart_message = sendMessage("Restarting...", context.bot, update)
+    restart_message = sendMessage("Wait, I'm restarting", context.bot, update)
     fs_utils.clean_all()
     alive.kill()
     process = psutil.Process(web.pid)
@@ -161,7 +160,7 @@ help_string_telegraph = f'''<br>
 '''
 
 help = telegraph.create_page(
-        title='Mirror-Leech-Bot Help',
+        title='JKxBots Help',
         content=help_string_telegraph,
     )["path"]
 
