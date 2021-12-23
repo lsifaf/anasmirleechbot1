@@ -32,7 +32,7 @@ class _BotCommands:
         self.ExecHelpCommand = 'exechelp'
         self.LeechSetCommand = 'leechset'
         self.SetThumbCommand = 'setthumb'
-        self.LeechCommand = 'leech1'
+        self.LeechCommand = 'leech'
         self.UnzipLeechCommand = 'unzipleech'
         self.ZipLeechCommand = 'zipleech'
         self.QbLeechCommand = 'qbleech'
